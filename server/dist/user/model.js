@@ -8,9 +8,9 @@ var _mongoose = require('mongoose');
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
 
-var _bcryptNodejs = require('bcrypt-nodejs');
+var _bcryptjs = require('bcryptjs');
 
-var _bcryptNodejs2 = _interopRequireDefault(_bcryptNodejs);
+var _bcryptjs2 = _interopRequireDefault(_bcryptjs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,12 +45,12 @@ Schema.pre('save', function (next) {
     // get access to user model, then we can use user.email, user.password
     var user = this;
 
-    _bcryptNodejs2.default.genSalt(10, function (err, salt) {
+    _bcryptjs2.default.genSalt(10, function (err, salt) {
         if (err) {
             return next(err);
         }
 
-        _bcryptNodejs2.default.hash(user.password, salt, null, function (err, hash) {
+        _bcryptjs2.default.hash(user.password, salt, null, function (err, hash) {
             if (err) {
                 return next(err);
             }
@@ -63,7 +63,7 @@ Schema.pre('save', function (next) {
 
 // Make use of methods for comparedPassword
 Schema.methods.comparedPassword = function (candidatePassword, cb) {
-    _bcryptNodejs2.default.compare(candidatePassword, this.password, function (err, good) {
+    _bcryptjs2.default.compare(candidatePassword, this.password, function (err, good) {
         if (err) {
             return cb(err);
         }

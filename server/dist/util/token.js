@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _jwtSimple = require('jwt-simple');
+var _jsonwebtoken = require('jsonwebtoken');
 
-var _jwtSimple2 = _interopRequireDefault(_jwtSimple);
+var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
 
 var _config = require('../config');
 
@@ -21,10 +21,10 @@ exports.default = {
             sub: user.id,
             iat: timeStamp
         };
-        return _jwtSimple2.default.encode(payload, _config2.default.jwt_secret);
+        return _jsonwebtoken2.default.encode(payload, _config2.default.jwt_secret);
     },
     verifyToken: function verifyToken(token, cb) {
-        var decode = _jwtSimple2.default.decode(token, _config2.default.jwt_secret);
+        var decode = _jsonwebtoken2.default.decode(token, _config2.default.jwt_secret);
         if (!decode) return cb(new Error('Token is not verified.'));
         cb(null, decode);
     }
