@@ -1,0 +1,25 @@
+{
+	"name": "mern-commerce",
+	"version": "1.0.0",
+	"description": "E-commerce application built with React, Nodejs, MongoDB, and Expressjs",
+	"main": "./client/index.js",
+	"scripts": {
+		"client": "npm run start --prefix client",
+		"server": "npm run dev --prefix server",
+		"start": "concurrently \"npm run server\" \"npm run client\" ",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SamOdum/mern-commerce.git"
+	},
+	"author": "Sam Odum",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SamOdum/mern-commerce/issues"
+	},
+	"homepage": "https://github.com/SamOdum/mern-commerce#readme",
+	"devDependencies": {
+		"concurrently": "^5.1.0"
+	}
+}

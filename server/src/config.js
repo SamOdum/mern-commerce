@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
-import "regenerator-runtime/runtime";
 
 if(process.env.NODE_ENV != 'production'){
   dotenv.config({ path: path.resolve(__dirname, '.env') });

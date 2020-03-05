@@ -1,76 +1,74 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
+exports["default"] = void 0;
 
-var _mongoose = require('mongoose');
+var _mongoose = _interopRequireDefault(require("mongoose"));
 
-var _mongoose2 = _interopRequireDefault(_mongoose);
+var _bcryptjs = _interopRequireDefault(require("bcryptjs"));
 
-var _bcryptjs = require('bcryptjs');
-
-var _bcryptjs2 = _interopRequireDefault(_bcryptjs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // Define the model
-var Schema = new _mongoose2.default.Schema({
-    name: {
-        first: String,
-        last: String
+var Schema = new _mongoose["default"].Schema({
+  name: {
+    first: String,
+    last: String
+  },
+  email: {
+    type: String,
+    unique: true,
+    lowercase: true
+  },
+  emailVerified: {
+    type: Boolean,
+    "default": false
+  },
+  password: String,
+  phone: {
+    number: {
+      type: String
     },
-    email: {
-        type: String,
-        unique: true,
-        lowercase: true
-    },
-    emailVerified: {
-        type: Boolean,
-        default: false
-    },
-    password: String,
-    phone: {
-        number: {
-            type: String
-        },
-        verified: {
-            type: Boolean,
-            default: false
-        }
+    verified: {
+      type: Boolean,
+      "default": false
     }
+  }
 });
-
 Schema.pre('save', function (next) {
-    // get access to user model, then we can use user.email, user.password
-    var user = this;
+  // get access to user model, then we can use user.email, user.password
+  var user = this;
 
-    _bcryptjs2.default.genSalt(10, function (err, salt) {
-        if (err) {
-            return next(err);
-        }
+  _bcryptjs["default"].genSalt(10, function (err, salt) {
+    if (err) {
+      return next(err);
+    }
 
-        _bcryptjs2.default.hash(user.password, salt, null, function (err, hash) {
-            if (err) {
-                return next(err);
-            }
+    _bcryptjs["default"].hash(user.password, salt, null, function (err, hash) {
+      if (err) {
+        return next(err);
+      }
 
-            user.password = hash;
-            next();
-        });
+      user.password = hash;
+      next();
     });
-});
+  });
+}); // Make use of methods for comparedPassword
 
-// Make use of methods for comparedPassword
 Schema.methods.comparedPassword = function (candidatePassword, cb) {
-    _bcryptjs2.default.compare(candidatePassword, this.password, function (err, good) {
-        if (err) {
-            return cb(err);
-        }
-        cb(null, good);
-    });
-};
+  _bcryptjs["default"].compare(candidatePassword, this.password, function (err, good) {
+    if (err) {
+      return cb(err);
+    }
 
-// Export the model
-exports.default = _mongoose2.default.model('User', Schema);
+    cb(null, good);
+  });
+}; // Export the model
+
+
+var _default = _mongoose["default"].model('User', Schema);
+
+exports["default"] = _default;
 //# sourceMappingURL=model.js.map
