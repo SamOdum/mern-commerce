@@ -1,0 +1,17 @@
+@import "./styles/base/theme.scss";
+@import "./styles/base/reset";
+// @import "./styles/base//reset";
+// @import "./styles/base.scss";
+@import "./styles/modules/Header.scss";
+@import "./styles/modules/HeroSlider";
+@import "./styles/modules/SmallBanner";
+@import "./styles/modules/ProductArea";
+@import "./styles/modules/MediumBanner";
+@import "./styles/modules/MostPopular";
+@import "./styles/modules/ShopHomeList";
+@import "./styles/modules/CountDown";
+@import "./styles/modules/ShopBlog";
+@import "./styles/modules/ShopServices";
+@import "./styles/modules/ShopNewsletter";
+@import "./styles/modules/Footer";
+@import "./styles/base/responsive";

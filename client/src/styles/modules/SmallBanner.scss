@@ -1,0 +1,61 @@
+/*======================================
+   Start Small Banner CSS
+========================================*/
+.small-banner {
+  padding: 30px 0;
+  padding-bottom: 0;
+
+  & .single-banner {
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      height: 100%;
+      transition: all 0.4s ease;
+      width: 100%;
+    }
+
+    & .content {
+      left: 0;
+      padding-left: 35px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    & h3 {
+      color: $pri-text-color-01;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: capitalize;
+
+      & span {
+        color: $pri-brand-color-01;
+      }
+    }
+
+    & p {
+      color: $pri-brand-color-01;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      text-transform: capitalize;
+    }
+
+    & a {
+      border-bottom: 2px solid $pri-text-color-01;
+      color: $pri-text-color-01;
+      display: block;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 22px;
+      text-transform: uppercase;
+
+      &:hover {
+        border-color: $pri-brand-color-01;
+        color: $pri-brand-color-01;
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+/*======================================
+   Hero Area CSS
+========================================*/
+.hero-slider {
+  background: #fff;
+  overflow: hidden;
+
+  & .single-slider {
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-image: url("https://via.placeholder.com/1900x700");
+    background-image: url("/images/hero-image/image-1.png");
+    height: 510px;
+  }
+
+  // * .text-inner {
+  // }
+
+  & .hero-text {
+    margin-top: 100px;
+    padding: 0 30px;
+
+    & h1 {
+      color: $pri-brand-color-01;
+      font-size: 47px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 20px;
+
+      & span {
+        color: $pri-text-color-01;
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: initial;
+        margin-bottom: 12px;
+      }
+    }
+
+    & p {
+      color: $pri-text-color-01;
+      margin-bottom: 35px;
+    }
+
+    & .button {
+      margin: 0;
+    }
+
+    & .btn {
+      background: $pri-text-color-01;
+      border: none;
+      color: #fff;
+      height: auto;
+      line-height: initial;
+      padding: 13px 30px;
+      z-index: 0;
+
+      &:hover {
+        background: $pri-brand-color-01;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Start Hero Area 2 CSS */
+.hero-area2 {
+  position: relative;
+}
+.hero-area2 .single-slider.overlay:before {
+  background: $pri-brand-color-01;
+  opacity: 0;
+  transform: scale(0.9);
+  visibility: hidden;
+}
+.hero-area2 .single-slider.overlay:hover:before {
+  opacity: 0.9;
+  visibility: visible;
+  transform: scale(1);
+}
+.hero-area2 .single-slider {
+  height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-area2 .single-slider .content {
+  position: relative;
+}
+.hero-area2 .single-slider .content {
+  width: 100%;
+  padding: 15px;
+  z-index: 2;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-align: center;
+  padding-top: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+}
+.hero-area2 .single-slider:hover .content {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.hero-area2 .single-slider .content .sub-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+}
+.hero-area2 .single-slider .content .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.hero-area2 .single-slider .content .des {
+  color: #fff;
+}
+.hero-area2 .single-slider .content .button {
+}
+.hero-area2 .single-slider .content .button .btn {
+  padding: 9px 25px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-top: 25px;
+}
+.hero-area2 .single-slider .content .button .btn:hover {
+  background: #fff;
+  color: $pri-text-color-01;
+  border-color: transparent;
+}
+/* Owl Nav CSS */
+.hero-area2 .owl-carousel .owl-nav {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -30px;
+}
+.hero-area2 .owl-carousel .owl-nav div {
+  height: 60px;
+  width: 40px;
+  line-height: 60px;
+  text-align: center;
+  background: $pri-text-color-01;
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  margin: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 0;
+  border-radius: 0;
+}
+.hero-area2 .owl-carousel .owl-nav div:hover {
+  background: $pri-brand-color-01;
+  color: #fff;
+}
+.hero-area2 .owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: 0;
+}
+.hero-area2 .owl-carousel .owl-controls .owl-nav .owl-next {
+  right: 0;
+}
+/* Hero Area 3 */
+.hero-area3 {
+}
+.hero-area3 .big-content {
+  background-image: url("https://via.placeholder.com/850x530");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 511px;
+  margin-top: 30px;
+  position: relative;
+}
+.hero-area3 .big-content .inner {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 0 50px 0 360px;
+  transform: translateY(-50%);
+}
+.hero-area3 .big-content .title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 37px;
+}
+.hero-area3 .big-content .title span {
+  color: $pri-brand-color-01;
+}
+.hero-area3 .big-content .des {
+}
+.hero-area3 .big-content .button {
+  margin-top: 40px;
+  display: block;
+}
+.hero-area3 .big-content .button .btn {
+  color: #fff;
+}
+
+.hero-area3 .small-content {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  position: relative;
+}
+.hero-area3 .small-content.first {
+  background-image: url("https://via.placeholder.com/450x300");
+}
+.hero-area3 .small-content.secound {
+  background-image: url("https://via.placeholder.com/450x300");
+}
+.hero-area3 .small-content .inner {
+  padding: 30px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.hero-area3 .small-content .title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.hero-area3 .small-content .title span {
+  color: $pri-brand-color-01;
+}
+.hero-area3 .small-content .des {
+}
+.hero-area3 .small-content .button {
+  margin-top: 10px;
+  display: block;
+}
+.hero-area3 .small-content .button .btn {
+  background: transparent;
+  padding: 0;
+  color: $pri-text-color-01;
+  border-bottom: 2px solid $pri-text-color-01;
+  font-size: 13px;
+}
+.hero-area3 .small-content .button .btn:hover {
+  color: $pri-brand-color-01;
+  border-color: $pri-brand-color-01;
+}
+/* Hero Area 4 */
+.hero-area4 .big-content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 510px;
+  margin-top: 30px;
+  position: relative;
+}
+.hero-area4 .big-content .inner {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 0 80px 0 50px;
+  transform: translateY(-50%);
+}
+.hero-area4 .big-content .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 35px;
+}
+.hero-area4 .big-content .title span {
+  color: $pri-brand-color-01;
+}
+.hero-area4 .big-content .des {
+}
+.hero-area4 .big-content .button {
+  margin-top: 40px;
+  display: block;
+}
+.hero-area4 .big-content .button .btn {
+  color: #fff;
+}
+.hero-area4 .owl-carousel .owl-nav {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -20px;
+}
+.hero-area4 .owl-carousel .owl-nav div {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: $pri-text-color-01;
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  margin: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 0;
+  border-radius: 0;
+}
+.hero-area4 .owl-carousel .owl-nav div:hover {
+  background: $pri-brand-color-01;
+  color: #fff;
+}
+.hero-area4 .owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: 0;
+}
+.hero-area4 .owl-carousel .owl-controls .owl-nav .owl-next {
+  right: 0;
+}

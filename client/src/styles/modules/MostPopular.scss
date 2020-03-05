@@ -1,0 +1,52 @@
+/*======================================
+   Start Most Popular CSS
+========================================*/
+.pro-tab-viewmore-wrap {
+  position: relative;
+  text-align: center;
+}
+.most-popular .section-title {
+  margin-bottom: 40px;
+}
+.pro-tab-viewmore-wrap .pro-viewmore {
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+.most-popular .single-product {
+  margin: 50px 15px 0 15px;
+}
+/* Slider Nav */
+.most-popular .owl-nav {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -25px;
+}
+.most-popular .owl-carousel .owl-nav div {
+  height: 60px;
+  width: 30px;
+  line-height: 58px;
+  background: #fff;
+  color: $pri-text-color-01;
+  position: absolute;
+  margin: 0;
+  border-radius: 0;
+  font-size: 15px;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0px 0px 10px #3333331c;
+}
+.most-popular .owl-carousel .owl-nav div:hover {
+  color: #fff;
+  background: $pri-brand-color-01;
+}
+.most-popular .owl-carousel .owl-controls .owl-nav .owl-prev {
+  left: 0;
+}
+.most-popular .owl-carousel .owl-controls .owl-nav .owl-next {
+  right: 0;
+}
