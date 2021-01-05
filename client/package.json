@@ -30,7 +30,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "css-loader": "^3.4.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
